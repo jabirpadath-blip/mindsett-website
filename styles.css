@@ -35,3 +35,123 @@ footer .ig-icon{width:16px;height:16px;border-width:1.5px;font-size:12px;vertica
 @media(max-width:700px){.counselling-grid,.counselling-modes,.founder-grid{grid-template-columns:1fr}.founder-card:last-child{grid-column:auto;max-width:none}.founder-card>img{height:430px}.clarity-card{padding:28px 20px}.clarity-card .button{width:100%;text-align:center}.outline-light{border-color:#fff}.final-cta .buttons{justify-content:center}.final-cta .button{width:100%;text-align:center}}
 
 section[id]{scroll-margin-top:90px}
+
+
+/* ===== MINDSETT FINAL PREMIUM HEADER ===== */
+:root{
+  --mindsett-deep-blue:#2367B1;
+  --mindsett-gold:#C99616;
+  --mindsett-green:#4C8B4B;
+  --mindsett-orange:#C96B25;
+  --mindsett-charcoal:#1B1B1B;
+  --mindsett-ivory:#FAF9F6;
+}
+
+header{
+  background:rgba(250,249,246,.96);
+  padding:15px 5vw;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  flex:0 0 auto;
+}
+
+.logo img{
+  width:205px;
+  height:auto;
+  display:block;
+}
+
+nav > a:not(.cta){
+  position:relative;
+  padding:10px 0 8px;
+  transition:color .22s ease;
+}
+
+nav > a:not(.cta)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:2px;
+  width:100%;
+  height:2px;
+  border-radius:999px;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .22s ease;
+  background:currentColor;
+  opacity:.9;
+}
+
+nav > a:not(.cta):hover::after,
+nav > a:not(.cta):focus-visible::after{
+  transform:scaleX(1);
+}
+
+/* Restrained Mindsett brand colours */
+nav > a[href="#difference"]{color:var(--mindsett-deep-blue);}
+nav > a[href="#blueprint"]{color:var(--mindsett-gold);}
+nav > a[href="#counselling"]{color:var(--mindsett-green);}
+nav > a[href="#transformations"]{color:var(--mindsett-orange);}
+nav > a[href="#founders"]{color:var(--mindsett-charcoal);}
+
+/* Relationship Clarity Call = single dominant CTA */
+nav .cta{
+  background:var(--mindsett-deep-blue);
+  color:#fff;
+  border:1px solid var(--mindsett-deep-blue);
+  padding:12px 20px;
+  box-shadow:0 8px 22px rgba(35,103,177,.18);
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+nav .cta:hover{
+  background:#1D5797;
+  transform:translateY(-1px);
+  box-shadow:0 10px 26px rgba(35,103,177,.24);
+}
+
+/* Hero: make Relationship Clarity Call visually primary in blue */
+.hero .buttons .button.light[href="#clarity"]{
+  background:var(--mindsett-deep-blue);
+  border-color:var(--mindsett-deep-blue);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(35,103,177,.16);
+}
+
+.hero .buttons .button.light[href="#clarity"]:hover{
+  background:#1D5797;
+  border-color:#1D5797;
+}
+
+/* Keep Connect With Us charcoal */
+.hero .buttons .button.dark{
+  background:var(--mindsett-charcoal);
+  color:#fff;
+}
+
+/* Other relationship clarity CTA buttons */
+.final-cta .button.light[href="#clarity"]{
+  background:var(--mindsett-deep-blue);
+  border-color:var(--mindsett-deep-blue);
+  color:#fff;
+}
+
+/* Dedicated call card CTA */
+.clarity-card .button.light{
+  background:var(--mindsett-deep-blue);
+  border-color:var(--mindsett-deep-blue);
+  color:#fff;
+}
+
+@media(max-width:1000px){
+  .logo img{width:180px;}
+}
+
+@media(max-width:700px){
+  .logo img{width:165px;}
+  nav{background:var(--mindsett-ivory);}
+  nav > a:not(.cta){padding:9px 4px;}
+}
